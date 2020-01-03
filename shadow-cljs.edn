@@ -1,0 +1,24 @@
+{:deps     {:aliases [:dev]}
+ :nrepl    {:port 9000}
+ :dev-http {8000 {:root "resources/public"
+                  :proxy-url "http://localhost:9999"}}
+ :builds   {:sample2 {:target     :browser
+                      :output-dir "resources/public/js/main"
+                      :asset-path "/js/main"
+                      :modules    {:main {:entries [sample2.core]
+                                          :init-fn sample2.core/init!}}
+                      :devtools   {:after-load sample2.core/reload!}}
+            :sample3 {:target     :browser
+                      :output-dir "resources/public/js/main"
+                      :asset-path "/js/main"
+                      :modules    {:main {:entries [sample3.core]
+                                          :init-fn sample3.core/init!}}
+                      :devtools   {:after-load sample3.core/reload!}}
+            :sample4 {:target     :browser
+                      :output-dir "resources/public/js/main"
+                      :asset-path "/js/main"
+                      :modules    {:main {:entries [sample4.client.core]
+                                          :init-fn sample4.client.core/init!}}
+                      :devtools   {:after-load sample4.client.core/reload!}}}}
+
+; Start REPL on port 9000, then (shadow/repl :sample4)
