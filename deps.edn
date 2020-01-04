@@ -1,7 +1,8 @@
 {:paths ["src/main" "resources"]
  :deps {org.clojure/core.async {:mvn/version "0.6.532"}
         garden {:mvn/version "1.3.9"}
-        vrac {:local/root "../vrac"} ; TODO: release Vrac
+        vrac {:git/url "https://github.com/green-coder/vrac.git"
+              :sha "899233f39024ad24a9966587265a929e054c60a6"}
 
         ;; For the HTTP server
         http-kit {:mvn/version "2.3.0"}
