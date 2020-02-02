@@ -1,6 +1,5 @@
 (ns sample4.client.component
-  #?(:clj (:require [vrac.core :as v :refer [defc]])
-     :cljs (:require [vrac.core :as v :refer-macros [defc]])))
+  (:require [vrac.core :as v :refer [defc]]))
 
 (defc speaker-comp [speaker]
   {:id :coscup/speaker}

@@ -1,5 +1,5 @@
 (ns sample3.core
-  (:require [vrac.core :as v :refer-macros [defc]]
+  (:require [vrac.core :as v :refer [defc]]
             [vrac.react.core :as vr]))
 
 ; Demonstration of:
